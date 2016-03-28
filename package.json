@@ -1,0 +1,21 @@
+{
+  "name": "react-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "typings install",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.9.0-dev.20160328",
+    "typings": "^0.7.9",
+    "webpack": "^1.12.14"
+  }
+}
