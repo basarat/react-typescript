@@ -8,7 +8,7 @@ This is a sample project from the TypeScript book : [*TypeScript Deep Dive*](htt
 ```
 git clone https://github.com/basarat/react-typescript.git
 npm install
-npm run watch
+npm start
 ```
 
 Now you can open `index.html` in your browser to see the results. Edit a TypeScript file and refresh your browser to play around.
