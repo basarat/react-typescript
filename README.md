@@ -15,6 +15,19 @@ Now you can open `index.html` in your browser to see the results. Edit a TypeScr
 
 # Things worth demoing
 
+**Setup**
+
+* package.json 
+* tsconfig.json
+* webpack.config.js
+* index.html
+* app.tsx
+
+**Why React**
+
+* `console.log(<div>Hello world</div>)`;
+* `console.log(ReactDomServer.renderToString(<div>Hello world</div>))`;
+
 **Checking**
 
 * Misspell the component (Hellow)
@@ -28,3 +41,8 @@ Now you can open `index.html` in your browser to see the results. Edit a TypeScr
 * Change the type of an attribute (message: number)
 * Rename an attribute (message -> messages)
 * Rename the component (Hello -> HelloPeople)
+
+**Usages**
+
+* The component (2 places)
+* The attribute (3 places)
