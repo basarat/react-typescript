@@ -33,7 +33,6 @@ Now you can open `index.html` in your browser to see the results. Edit a TypeScr
 * Misspell the component (Hellow)
 * Misspell an attribute (compler)
 * Invalid type for an attribute (compiler={123})
-* Add an invalid attribute (message)
 
 **Refactoring**
 
