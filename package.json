@@ -5,18 +5,23 @@
   "main": "index.js",
   "repository": "https://github.com/basarat/react-typescript.git",
   "scripts": {
-    "prepublish": "typings install",
     "start": "webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+
+  "dependencies": {
+    "@types/react": "^15.0.9",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+
   "devDependencies": {
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "ts-loader": "^0.8.2",
-    "typescript": "^1.9.0-dev.20160328",
-    "typings": "^0.7.9",
-    "webpack": "^1.12.14"
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "webpack": "^2.2.1"
   }
 }
