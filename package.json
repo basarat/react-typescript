@@ -5,7 +5,6 @@
   "main": "index.js",
   "repository": "https://github.com/basarat/react-typescript.git",
   "scripts": {
-    "prepublish": "typings install",
     "start": "webpack --watch"
   },
   "keywords": [],
