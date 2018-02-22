@@ -1,16 +1,16 @@
 module.exports = {
-    entry: './src/app.tsx',
-    output: {
-        filename: './dist/bundle.js'
-    },
-    resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
-        extensions: ['.webpack.js', '.web.js', '.ts', '.tsx', '.js']
-    },
-    module: {
-        rules: [
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            { test: /\.tsx?$/, loader: 'ts-loader' }
-        ]
-    }
+  devtool: 'inline-source-map',
+  entry: './src/app/app.tsx',
+  output: {
+    path: __dirname + '/public',
+    filename: 'build/app.js'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
+  module: {
+    rules: [
+      { test: /\.tsx?$/, loader: 'ts-loader' }
+    ]
+  }
 }

@@ -1,7 +1,7 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-const Hello = (props: { compiler: string, framework: string }) => {
+const Hello: React.SFC<{ compiler: string, framework: string }> = (props) => {
   return (
     <div>
       <div>{props.compiler}</div>
