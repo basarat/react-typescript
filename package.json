@@ -10,14 +10,15 @@
     "build": "webpack ./webpack.config.js",
     "start": "webpack-dev-server ./webpack.config.js --content-base ./public"
   },
-  "dependencies": {
-    "@types/react": "16.0.18",
-    "@types/react-dom": "16.0.2",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
-    "ts-loader": "3.0.5",
-    "typescript": "2.5.3",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.3"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "16.0.38",
+    "@types/react-dom": "16.0.4",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "ts-loader": "3.5.0",
+    "typescript": "2.7.2",
+    "webpack": "3.11.0",
+    "webpack-dev-server": "2.11.1"
   }
 }
