@@ -1,4 +1,9 @@
+# Node 
 node_modules
-dist
-npm-debug.log
+
+# Build assets
+public
+
+# IDE
 .alm
+.vscode
