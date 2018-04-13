@@ -2,7 +2,7 @@
 node_modules
 
 # Build assets
-public
+public/build
 
 # IDE
 .alm
