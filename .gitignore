@@ -3,6 +3,7 @@ node_modules
 
 # Build assets
 public/build
+public/index.html
 
 # IDE
 .alm
