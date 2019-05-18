@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/app/app.tsx',
   plugins: [
-    new CleanWebpackPlugin(['public/build']),
+    new CleanWebpackPlugin({
+	  cleanAfterEveryBuildPatterns:['public/build']
+	}),
     new HtmlWebpackPlugin({
       template: 'src/templates/index.html'
     }),
