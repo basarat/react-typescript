@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-const Hello: React.SFC<{ compiler: string, framework: string }> = (props) => {
+const Hello: React.FunctionComponent<{ compiler: string, framework: string }> = (props) => {
   return (
     <div>
       <div>{props.compiler}</div>
