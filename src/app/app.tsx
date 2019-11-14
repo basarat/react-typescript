@@ -1,7 +1,7 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const Hello: React.FunctionComponent<{ compiler: string, framework: string }> = (props) => {
+const App: React.FC<{ compiler: string, framework: string }> = (props) => {
   return (
     <div>
       <div>{props.compiler}</div>
@@ -11,6 +11,6 @@ const Hello: React.FunctionComponent<{ compiler: string, framework: string }> = 
 }
 
 ReactDOM.render(
-  <Hello compiler="TypeScript" framework="React" />,
+  <App compiler="TypeScript" framework="React" />,
   document.getElementById("root")
 );
