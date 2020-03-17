@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import { CounterState, Counter, useCounterState } from '../components/counter';
 
 function useAppState() {
-  const counter = useCounterState();
+  const counterOne = useCounterState();
   const counterSecond = useCounterState();
+  const sum = counterOne.count + counterSecond.count;
   return {
-    counter,
-    counterSecond
+    counterOne,
+    counterSecond,
+    sum,
   }
 }
 
@@ -16,9 +18,9 @@ const App: React.FC = (props) => {
   return (
     <div>
       <h1>Hello</h1>
-      <Counter counterState={appState.counter} />
+      <Counter counterState={appState.counterOne} />
       <Counter counterState={appState.counterSecond} />
-      Sum with hooks : {appState.counter.count + appState.counterSecond.count}
+      Sum : {appState.sum}
     </div>
   );
 }
