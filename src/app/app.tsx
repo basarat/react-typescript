@@ -1,16 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { CounterState, Counter, useCounterState } from '../components/counter';
 
-const App: React.FC<{ compiler: string, framework: string }> = (props) => {
+function useAppState() {
+  const counter = useCounterState();
+  const counterSecond = useCounterState();
+  return {
+    counter,
+    counterSecond
+  }
+}
+
+const App: React.FC = (props) => {
+  const appState = useAppState();
   return (
     <div>
-      <div>{props.compiler}</div>
-      <div>{props.framework}</div>
+      <h1>Hello</h1>
+      <Counter counterState={appState.counter} />
+      <Counter counterState={appState.counterSecond} />
+      Sum with hooks : {appState.counter.count + appState.counterSecond.count}
     </div>
   );
 }
 
 ReactDOM.render(
-  <App compiler="TypeScript" framework="React" />,
+  <App />,
   document.getElementById("root")
 );
