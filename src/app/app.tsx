@@ -13,7 +13,7 @@ function useAppState() {
   }
 }
 
-const App: React.FC = (props) => {
+const App: React.FC = () => {
   const appState = useAppState();
   return (
     <div>
