@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Counter, useCounter } from '../components/counter';
+import { Counter, useCounter, UseCounter } from '../components/counter';
 
 function useApp() {
-  const counterOne = useCounter();
-  const counterTwo = useCounter();
-  const sum = counterOne.count + counterTwo.count;
+  const [count, setCount] = React.useState(1);
+  const addCounter = () => setCount(count + 1);
+  const counters = [...new Array<UseCounter>(count)].map(useCounter);
+
+  const sum = counters.reduce((a, c) => a + c.count, 0);
   return {
-    counterOne,
-    counterTwo,
+    addCounter,
+    counters,
     sum,
   }
 }
@@ -18,8 +20,8 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <Counter use={appState.counterOne} />
-      <Counter use={appState.counterTwo} />
+      <button onClick={appState.addCounter}>Add counter</button>
+      {appState.counters.map((use, i) => (<Counter key={i} use={use} />))}
       <div>Sum : {appState.sum}</div>
     </div>
   );
