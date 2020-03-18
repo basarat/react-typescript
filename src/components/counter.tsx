@@ -6,10 +6,10 @@ export type UseCounter = {
 }
 
 export function useCounter(): UseCounter {
-  const [count, changeCount] = React.useState(0);
+  const [count, setCount] = React.useState(0);
   return {
     count,
-    increment: () => changeCount(count + 1),
+    increment: () => setCount(count + 1),
   };
 }
 
