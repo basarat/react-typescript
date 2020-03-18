@@ -1,11 +1,11 @@
 import React from 'react';
 
-export type CounterState = {
+export type UseCounter = {
   count: number,
   increment: () => void,
 }
 
-export function useCounterState(): CounterState {
+export function useCounter(): UseCounter {
   const [count, changeCount] = React.useState(0);
   return {
     count,
@@ -14,11 +14,11 @@ export function useCounterState(): CounterState {
 }
 
 
-export const Counter: React.FC<{ counterState: CounterState }> = ({ counterState }) => {
+export const Counter: React.FC<{ use: UseCounter }> = ({ use }) => {
   return (
     <div>
-      <button onClick={counterState.increment}>Increment</button>
-      <div>Count: {counterState.count}</div>
+      <button onClick={use.increment}>Increment</button>
+      <div>Count: {use.count}</div>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Counter, useCounterState } from '../components/counter';
+import { Counter, useCounter } from '../components/counter';
 
 function useAppState() {
-  const counterOne = useCounterState();
+  const counterOne = useCounter();
   return {
     counterOne,
   }
@@ -14,7 +14,7 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Hello</h1>
-      <Counter counterState={appState.counterOne} />
+      <Counter use={appState.counterOne} />
     </div>
   );
 }
