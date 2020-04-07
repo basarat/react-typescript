@@ -2,8 +2,8 @@ import React, { useMemo, useCallback, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Counter, useCounter, UseCounter } from '../components/counter';
 
-function Loop<T>({ items, children }: { items: T[], children: (item: T, index: number) => React.ReactElement | null }) {
-  const Child = (props: { item: T, index: number }) => children(props.item, props.index);
+function Loop<T>({ items, children, deps = [] }: { items: T[], children: (item: T, index: number) => React.ReactElement | null, deps?: React.DependencyList[] }) {
+  const Child = useCallback((props: { item: T, index: number }) => children(props.item, props.index), deps);
   return (
     <>
       {items.map((item, index) => <Child key={index} item={item} index={index} />)}
