@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "sourceMap": true,
+    "strict": true,
     "module": "commonjs",
     "esModuleInterop": true,
     "resolveJsonModule": true,
